@@ -11,4 +11,12 @@ contract DataTypes{
     bytes32 bmessage = "hello";
     string myName = "Satish";
 
+    function getStateVariables() public view returns(uint, int, uint, bool, address, bytes32, string memory){
+        return (x, i, j, isEthereumCool, myAddress, bmessage, myAddress);
+    }
+
+    function setMsg(bytes32 newValue) private returns(bytes32){
+        bmessage = newValue;
+    }
+
 }
